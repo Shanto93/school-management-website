@@ -3,7 +3,7 @@ import userImg from "../../assets/user.jpg";
 
 const Header = () => {
     return (
-        <div className="w-full bg-[#1d1e4e] text-white shadow flex items-center justify-between px-3 md:px-8 py-2 md:py-3 md:h-20 rounded-b-2xl">
+        <div className="w-full bg-[#1d1e4e] text-white shadow flex items-center justify-between px-3 md:px-8 py-2 md:py-3 md:h-20 rounded-b-2xl mb-5">
             {/* Left: School Name and Subtitle */}
             <div className="flex items-center gap-2 md:gap-4">
                 <img
