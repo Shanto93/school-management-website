@@ -4,6 +4,7 @@ const TestingComponent = () => {
     return (
         <div>
             <p>This is Test Component</p>
+            <p>Second info added</p>
         </div>
     );
 };
