@@ -5,6 +5,7 @@ import {
   MdGrade, MdMenuBook, MdPeople, MdMenu, MdClose,
   MdExpandLess, MdExpandMore
 } from 'react-icons/md';
+import Header from "../modules/Dashboards/Header"
 
 const sidebarLinks = [
   {
@@ -184,6 +185,7 @@ const DashboardLayout = () => {
 
       {/* Main Content */}
       <main className='flex-1 p-6 pt-16 md:pt-6'>
+        <Header></Header>
         <Outlet />
       </main>
     </div>
