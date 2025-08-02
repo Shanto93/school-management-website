@@ -9,6 +9,7 @@ const TestingComponent = () => {
             <p>Forth info added</p>
             <p>5th info</p>
             <p>6th info added</p>
+            <p>7th info Addded</p>
         </div>
     );
 };
