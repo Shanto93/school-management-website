@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router";
 import DashboardLayout from "../layout/DashboardLayout";
 import App from "../App";
 import Dashboards from "../pages/Dashboards";
+import InstituteProfile from "../pages/InstituteProfile";
 
 export const router = createBrowserRouter([
     {
@@ -15,6 +16,10 @@ export const router = createBrowserRouter([
             {
                 path: "/dashboards",
                 Component: Dashboards
+            },
+            {
+                path: '/institute-profile',
+                Component: InstituteProfile
             }
         ]
 

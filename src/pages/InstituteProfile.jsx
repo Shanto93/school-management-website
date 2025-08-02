@@ -1,6 +1,6 @@
 import React from 'react';
 
-const InstituteInfo = () => {
+const InstituteProfile = () => {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-800 overflow-y-auto">
       {/* Header */}
@@ -98,4 +98,4 @@ const InstituteInfo = () => {
   );
 };
 
-export default InstituteInfo;
+export default InstituteProfile;
