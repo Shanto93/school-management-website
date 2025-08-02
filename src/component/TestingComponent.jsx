@@ -8,6 +8,7 @@ const TestingComponent = () => {
             <p>Third info added</p>
             <p>Forth info added</p>
             <p>5th info</p>
+            <p>6th info added</p>
         </div>
     );
 };
