@@ -4,11 +4,11 @@ import App from "../App";
 
 export const router = createBrowserRouter([
     {
-        path: "/dashboard",
+        path: "/",
         Component: DashboardLayout,
         children: [
             {
-                path: "/dashboard",
+                path: "/",
                 Component: App
             }
         ]
