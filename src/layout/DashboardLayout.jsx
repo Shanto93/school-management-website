@@ -70,10 +70,11 @@ const DashboardLayout = () => {
 
       {/* Sidebar */}
       <aside
-        className={`fixed md:static top-0 left-0 h-full w-72 bg-[#1d1e4e] text-white shadow-xl rounded-tr-2xl rounded-br-2xl flex flex-col py-6 px-4 z-50
+        className={`fixed md:static top-0 left-0 h-full w-full bg-[#1d1e4e] text-white shadow-xl rounded-tr-2xl rounded-br-2xl flex flex-col py-6 px-4 z-50
         transition-transform duration-300
         ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}
         md:translate-x-0 md:flex md:w-72 md:min-h-screen
+        overflow-y-auto max-h-screen md:overflow-visible md:max-h-none
         `}
         style={{ minWidth: '18rem' }}
       >
@@ -98,8 +99,7 @@ const DashboardLayout = () => {
                   className={({ isActive }) =>
                     `flex items-center gap-3 px-3 py-2 rounded-lg transition-all
                      font-medium
-                     ${isActive ? 'bg-white/20 text-[#ffd02c] shadow-md' : 'hover:bg-white/10 hover:text-[#ffd02c]'}
-                    `
+                     ${isActive ? 'bg-white/20 text-[#ffd02c] shadow-md' : 'hover:bg-white/10 hover:text-[#ffd02c]'}`
                   }
                   onClick={() => setSidebarOpen(false)}
                 >
@@ -149,8 +149,7 @@ const DashboardLayout = () => {
                                   to={sub.to}
                                   className={({ isActive }) =>
                                     `block px-3 py-1 rounded-md text-sm transition-all
-                                     ${isActive ? 'bg-[#ffd02c] text-[#1d1e4e]' : 'text-[#f1f1f1] hover:bg-white/10'}
-                                    `
+                                     ${isActive ? 'bg-[#ffd02c] text-[#1d1e4e]' : 'text-[#f1f1f1] hover:bg-white/10'}`
                                   }
                                   onClick={() => setSidebarOpen(false)}
                                 >
@@ -167,8 +166,7 @@ const DashboardLayout = () => {
                         className={({ isActive }) =>
                           `flex items-center gap-3 px-3 py-2 rounded-lg transition-all
                            font-medium
-                           ${isActive ? 'bg-white/20 text-[#ffd02c] shadow-md' : 'hover:bg-white/10 hover:text-[#ffd02c]'}
-                          `
+                           ${isActive ? 'bg-white/20 text-[#ffd02c] shadow-md' : 'hover:bg-white/10 hover:text-[#ffd02c]'}`
                         }
                         onClick={() => setSidebarOpen(false)}
                       >
