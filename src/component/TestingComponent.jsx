@@ -5,6 +5,8 @@ const TestingComponent = () => {
         <div>
             <p>This is Test Component</p>
             <p>Second info added</p>
+            <p>Third info added</p>
+            <p>Forth info added</p>
         </div>
     );
 };
