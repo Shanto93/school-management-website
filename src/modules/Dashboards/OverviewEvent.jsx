@@ -1,27 +1,3 @@
-// import { MoreVertical } from "lucide-react";
-
-// const OverviewEvent = () => {
-//     return (
-//         <div className="bg-white rounded-2xl shadow flex flex-col h-full">
-//             <div className="flex items-center justify-between mb-2 text-center bg-[#23245c] rounded-t-2xl shadow">
-//                 <span className="text-white font-semibold text-lg text-center">Events</span>
-//                 <button>
-//                     <MoreVertical className="text-white" size={20} />
-//                 </button>
-//             </div>
-//             <div className="flex-1 flex items-center justify-center">
-//                 <button className="bg-white px-4 py-1 rounded text-[#23245c] font-semibold text-sm shadow">
-//                     View All
-//                 </button>
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default OverviewEvent;
-
-
-
 import { MoreVertical, Calendar } from "lucide-react";
 
 const OverviewEvent = () => {
