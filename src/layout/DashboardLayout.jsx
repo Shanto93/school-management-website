@@ -5,6 +5,7 @@ import {
   MdGrade, MdMenuBook, MdPeople, MdMenu, MdClose,
   MdExpandLess, MdExpandMore
 } from 'react-icons/md';
+import Header from "../modules/Dashboards/Header"
 
 const sidebarLinks = [
   {
@@ -99,8 +100,7 @@ const DashboardLayout = () => {
                   className={({ isActive }) =>
                     `flex items-center gap-3 px-3 py-2 rounded-lg transition-all
                      font-medium
-                     ${isActive ? 'bg-white/20 text-[#ffd02c] shadow-md' : 'hover:bg-white/10 hover:text-[#ffd02c]'}
-                    `
+                     ${isActive ? 'bg-white/20 text-[#ffd02c] shadow-md' : 'hover:bg-white/10 hover:text-[#ffd02c]'}`
                   }
                   onClick={() => setSidebarOpen(false)}
                 >
@@ -150,8 +150,7 @@ const DashboardLayout = () => {
                                   to={sub.to}
                                   className={({ isActive }) =>
                                     `block px-3 py-1 rounded-md text-sm transition-all
-                                     ${isActive ? 'bg-[#ffd02c] text-[#1d1e4e]' : 'text-[#f1f1f1] hover:bg-white/10'}
-                                    `
+                                     ${isActive ? 'bg-[#ffd02c] text-[#1d1e4e]' : 'text-[#f1f1f1] hover:bg-white/10'}`
                                   }
                                   onClick={() => setSidebarOpen(false)}
                                 >
@@ -168,8 +167,7 @@ const DashboardLayout = () => {
                         className={({ isActive }) =>
                           `flex items-center gap-3 px-3 py-2 rounded-lg transition-all
                            font-medium
-                           ${isActive ? 'bg-white/20 text-[#ffd02c] shadow-md' : 'hover:bg-white/10 hover:text-[#ffd02c]'}
-                          `
+                           ${isActive ? 'bg-white/20 text-[#ffd02c] shadow-md' : 'hover:bg-white/10 hover:text-[#ffd02c]'}`
                         }
                         onClick={() => setSidebarOpen(false)}
                       >
@@ -187,6 +185,7 @@ const DashboardLayout = () => {
 
       {/* Main Content */}
       <main className='flex-1 p-6 pt-16 md:pt-6'>
+        <Header></Header>
         <Outlet />
       </main>
     </div>
