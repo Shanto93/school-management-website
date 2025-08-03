@@ -3,6 +3,7 @@ import DashboardLayout from "../layout/DashboardLayout";
 import App from "../App";
 import Dashboards from "../pages/Dashboards";
 import InstituteProfile from "../pages/InstituteProfile";
+import AcademicSetup from "../pages/AcademicSetup";
 
 export const router = createBrowserRouter([
     {
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
             {
                 path: '/institute-profile',
                 Component: InstituteProfile
+            },
+            {
+                path: '/settings/academic-setup',
+                Component: AcademicSetup
             }
         ]
 
