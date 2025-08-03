@@ -4,7 +4,6 @@ import TotalOverview from '../modules/Dashboards/TotalOverview';
 const Dashboards = () => {
     return (
         <div>
-            
             <TotalOverview></TotalOverview>
         </div>
     );
