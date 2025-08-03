@@ -23,7 +23,22 @@ const sidebarLinks = [
     group: 'APPS & PAGES',
     links: [
       { label: 'Academic Events', to: '/academic-events', icon: <MdEvent size={22} /> },
-      { label: 'Settings', to: '/settings', icon: <MdSettings size={22} /> },
+      {
+        label: 'Settings',
+        to: '/settings',
+        icon: <MdSettings size={22} />,
+        subLinks: [
+          { label: 'Academic Setup', to: '/settings/academic-setup' },
+          { label: 'Academic Time', to: '/academic-time' },
+          { label: 'Class Config', to: '/class-config' },
+          { label: 'Period Config', to: '/period-config' },
+          { label: 'Class Subject Assign', to: '/class-subject-assign' },
+          { label: 'Teacher Subject Assign', to: '/teacher-subject-assign' },
+          { label: 'Mark Config', to: '/mark-config' },
+          { label: 'Choosable Subject', to: '/choosable-subject' },
+        ],
+
+      },
       {
         label: 'Routine',
         icon: <MdSchedule size={22} />,
