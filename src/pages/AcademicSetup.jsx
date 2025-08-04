@@ -1,27 +1,46 @@
-import React from 'react';
-import InputForm from '../modules/AcademicSetup/InputForm';
 
-const tableData = {
-  Class: ['HSC 27', 'HSC 26', 'HSC 25', 'SSC 26'],
-  Section: ['A', 'B', 'C', 'D'],
-  Group: ['Science', 'Business Studies', 'Humanities'],
-  Shift: ['Morning', 'Day', 'Evening'],
-  Subject: ['Math', 'Physics', 'Chemistry', 'Biology'],
-  Period: ['1st Period', '2nd Period', '3rd Period'],
-  'Mark Type': ['MCQ', 'Written', 'Practical'],
-  'Role Type': ['Admin', 'Teacher', 'Student'],
-  'Admission Year': ['2022', '2023', '2024'],
-};
+import InputForm from '../modules/AcademicSetup/InputForm';
+import ClassTable from '../modules/AcademicSetup/tables/ClassTable';
+import SectionTable from '../modules/AcademicSetup/tables/SectionTable';
+import GroupTable from '../modules/AcademicSetup/tables/GroupTable';
+import ShiftTable from '../modules/AcademicSetup/tables/ShiftTable';
+import PeriodTable from '../modules/AcademicSetup/tables/PeriodTable';
+import MarkType from '../modules/AcademicSetup/tables/MarkType';
+import SubjectTable from '../modules/AcademicSetup/tables/SubjectTable';
+import RoleType from '../modules/AcademicSetup/tables/RoleType';
+import AdmissionYear from '../modules/AcademicSetup/tables/AdmissionYear';
+
+
+// const tableData = {
+//   Class: ['HSC 27', 'HSC 26', 'HSC 25', 'SSC 26'],
+//   Section: ['A', 'B', 'C', 'D'],
+//   Group: ['Science', 'Business Studies', 'Humanities'],
+//   Shift: ['Morning', 'Day', 'Evening'],
+//   Subject: ['Math', 'Physics', 'Chemistry', 'Biology'],
+//   Period: ['1st Period', '2nd Period', '3rd Period'],
+//   'Mark Type': ['MCQ', 'Written', 'Practical'],
+//   'Role Type': ['Admin', 'Teacher', 'Student'],
+//   'Admission Year': ['2022', '2023', '2024'],
+// };
 
 const AcademicSetup = () => {
-  const types = Object.keys(tableData);
+  // const types = Object.keys(tableData);
 
   return (
     <div className="p-4 md:p-6">
       <InputForm></InputForm>
+      <ClassTable></ClassTable>
+      <SectionTable></SectionTable>
+      <GroupTable></GroupTable>
+      <SubjectTable></SubjectTable>
+      <ShiftTable></ShiftTable>
+      <PeriodTable></PeriodTable>
+      <MarkType></MarkType>
+      <RoleType></RoleType>
+      <AdmissionYear></AdmissionYear>
 
       {/* Tables */}
-      {types.map((type) => (
+      {/* {types.map((type) => (
         <div key={type} className="bg-white shadow rounded overflow-x-auto mb-6">
           <div className="bg-indigo-100 text-center py-3 font-semibold text-gray-600 text-lg">
             {type} List
@@ -48,7 +67,7 @@ const AcademicSetup = () => {
             </tbody>
           </table>
         </div>
-      ))}
+      ))} */}
     </div>
   );
 };
