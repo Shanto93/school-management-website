@@ -1,5 +1,4 @@
-import React from "react";
-import { MoreVertical, Info, User, UserRound } from "lucide-react";
+import { User, UserRound } from "lucide-react";
 import OverviewStatCard from "../../reusable/OverviewStatCard";
 import NoticeCard from "../../reusable/NoticeCard";
 

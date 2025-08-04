@@ -1,11 +1,12 @@
 import { useState } from 'react';
-import { NavLink, Outlet } from 'react-router'; // use react-router-dom
+import { NavLink, Outlet } from 'react-router'; // Make sure it's 'react-router-dom'
 import {
   MdDashboard, MdEvent, MdSettings, MdSchedule, MdAssignment,
   MdGrade, MdMenuBook, MdPeople, MdMenu, MdClose,
   MdExpandLess, MdExpandMore
 } from 'react-icons/md';
-import Header from "../modules/Dashboards/Header"
+import Footer from '../shared/Footer';
+import Header from '../shared/Header';
 
 const sidebarLinks = [
   {
@@ -37,7 +38,6 @@ const sidebarLinks = [
           { label: 'Mark Config', to: '/mark-config' },
           { label: 'Choosable Subject', to: '/choosable-subject' },
         ],
-
       },
       {
         label: 'Routine',
@@ -67,7 +67,7 @@ const DashboardLayout = () => {
   };
 
   return (
-    <div className='min-h-screen flex bg-[#f5f6fa]'>
+    <div className='h-screen flex bg-[#f5f6fa]'>
       {/* Mobile nav */}
       <div className="md:hidden fixed top-0 left-0 w-full bg-[#1d1e4e] text-white shadow z-30 flex items-center justify-between px-4 py-3">
         <span className="font-bold text-2xl tracking-wider">EDUTECH</span>
@@ -86,11 +86,12 @@ const DashboardLayout = () => {
 
       {/* Sidebar */}
       <aside
-        className={`fixed md:static top-0 left-0 h-full w-full bg-[#1d1e4e] text-white shadow-xl rounded-tr-2xl rounded-br-2xl flex flex-col py-6 px-4 z-50
-        transition-transform duration-300
-        ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}
-        md:translate-x-0 md:flex md:w-72 md:min-h-screen
-        overflow-y-auto max-h-screen md:overflow-visible md:max-h-none
+        className={`
+          fixed md:static top-0 left-0 h-screen w-full bg-[#1d1e4e] text-white shadow-xl rounded-tr-2xl rounded-br-2xl flex flex-col py-6 px-4 z-50
+          transition-transform duration-300
+          ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}
+          md:translate-x-0 md:flex md:w-72
+          overflow-y-auto
         `}
         style={{ minWidth: '18rem' }}
       >
@@ -115,8 +116,7 @@ const DashboardLayout = () => {
                   className={({ isActive }) =>
                     `flex items-center gap-3 px-3 py-2 rounded-lg transition-all
                      font-medium
-                     ${isActive ? 'bg-white/20 text-[#ffd02c] shadow-md' : 'hover:bg-white/10 hover:text-[#ffd02c]'}`
-                  }
+                     ${isActive ? 'bg-white/20 text-[#ffd02c] shadow-md' : 'hover:bg-white/10 hover:text-[#ffd02c]'}` }
                   onClick={() => setSidebarOpen(false)}
                 >
                   {icon}
@@ -165,8 +165,7 @@ const DashboardLayout = () => {
                                   to={sub.to}
                                   className={({ isActive }) =>
                                     `block px-3 py-1 rounded-md text-sm transition-all
-                                     ${isActive ? 'bg-[#ffd02c] text-[#1d1e4e]' : 'text-[#f1f1f1] hover:bg-white/10'}`
-                                  }
+                                     ${isActive ? 'bg-[#ffd02c] text-[#1d1e4e]' : 'text-[#f1f1f1] hover:bg-white/10'}` }
                                   onClick={() => setSidebarOpen(false)}
                                 >
                                   {sub.label}
@@ -199,9 +198,10 @@ const DashboardLayout = () => {
       </aside>
 
       {/* Main Content */}
-      <main className='flex-1 p-6 pt-16 md:pt-6'>
-        <Header></Header>
+      <main className='flex-1 h-screen overflow-y-auto p-6 pt-16 md:pt-6'>
+        <Header />
         <Outlet />
+        <Footer></Footer>
       </main>
     </div>
   );

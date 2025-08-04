@@ -1,5 +1,3 @@
-import React from 'react';
-
 const NoticeCard = () => {
     return (
         <div className="bg-white rounded-2xl shadow flex-1 flex flex-col w-full max-w-md h-full">

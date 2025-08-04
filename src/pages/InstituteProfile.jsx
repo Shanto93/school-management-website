@@ -131,15 +131,6 @@ const InstituteProfile = () => {
           EDIT
         </button>
       </div>
-
-      {/* Footer
-      <footer className="bg-[#1d1e4e] text-gray-300 text-center px-4 py-4 w-full flex flex-col sm:flex-row justify-between gap-2 items-center">
-        <div>© 2025, made with ❤️ by <strong>EduHub</strong></div>
-        <div className="flex gap-4 text-indigo-300">
-          <a href="#" className="hover:underline">Contact Us</a>
-          <a href="#" className="hover:underline">Support</a>
-        </div>
-      </footer> */}
     </div>
   );
 };
