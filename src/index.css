@@ -1,1 +1,45 @@
 @import "tailwindcss";
+
+
+/* 1. Make calendar container fluid */
+.fc {
+  max-width: 100% !important;
+}
+
+/* 2. Stack toolbar chunks on small screens */
+@media (max-width: 640px) {
+  .fc .fc-toolbar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .fc .fc-toolbar-chunk {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* 3. Shrink font sizes slightly on mobile */
+@media (max-width: 480px) {
+  .fc {
+    font-size: 0.8rem;
+  }
+  .fc .fc-toolbar-title {
+    font-size: 1rem;
+  }
+  .fc .fc-button {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.7rem;
+  }
+}
+
+/* 4. Always show events (no clipping) */
+.fc .fc-daygrid-event {
+  white-space: normal; /* wrap long titles */
+}
+
+/* 5. Prevent unwanted overflow inside card */
+.shadow-lg {
+  overflow: hidden;
+}
